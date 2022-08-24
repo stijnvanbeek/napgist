@@ -7,7 +7,8 @@ set(MODULE_NAME_EXTRA_LIBS gist)
 if(WIN32)
      set(MODULE_NAME_EXTRA_LIBS "${MODULE_NAME_EXTRA_LIBS}" winmm)
 endif()
-add_include_to_interface_target(mod_napgist ${GIST_INCLUDE_DIRS})
+add_include_to_interface_target(mod_napgist ${GIST_INCLUDE_DIR})
+add_define_to_interface_target(mod_napgist USE_KISS_FFT)
 
 # Install gist lib into packaged app
 if(APPLE)
