@@ -5,7 +5,7 @@ find_package(gist REQUIRED)
 
 file(GLOB_RECURSE sources src/*.cpp src/*.h)
 
-set(INCLUDES sources ${GIST_INCLUDE_DIR})
+set(INCLUDES src ${GIST_INCLUDE_DIR})
 
 # Get our NAP modules dependencies from module.json
 module_json_to_cmake()
