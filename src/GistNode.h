@@ -25,6 +25,19 @@ namespace nap
                 std::lock_guard<std::mutex> lock(mMutex);
                 return mGist.energyDifference();
             }
+
+            SampleValue getPeakEnergy()
+            {
+                std::lock_guard<std::mutex> lock(mMutex);
+                return mGist.peakEnergy();
+            }
+
+            float getPitch()
+            {
+                std::lock_guard<std::mutex> lock(mMutex);
+                return mGist.pitch();
+            }
+
             SampleValue getSpectralDifference() { return mGist.spectralDifference(); }
             SampleValue getSpectralDifferenceHWR() { return mGist.spectralDifferenceHWR(); }
             SampleValue getComplexSpectralDifference() { return mGist.complexSpectralDifference(); }
